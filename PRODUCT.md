@@ -14,11 +14,11 @@ Rovelo is a local-first desktop app, written entirely in Rust, for drawing brand
 
 ## Brand Personality
 
-Precise, calm and warm. A trusted instrument for people who care how things look: approachable without being playful, capable without visual noise.
+Precise, calm and confident. A trusted instrument for people who care how things look: approachable without being playful, capable without visual noise.
 
 ## Anti-references
 
-Dark default dashboards, decorative glass, ornamental gradients, oversized rounding, modal-heavy workflows, heavy toolbars that eat the canvas, default-grey GUI toolkit chrome.
+Decorative glass on chrome (glass belongs to diagram groups only), ornamental gradients, oversized rounding, modal-heavy workflows, heavy toolbars that eat the canvas, default-grey GUI toolkit chrome.
 
 ## Design Principles
 
