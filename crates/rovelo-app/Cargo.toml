@@ -1,0 +1,23 @@
+[package]
+name = "rovelo-app"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "rovelo"
+path = "src/main.rs"
+
+[dependencies]
+rovelo-core = { path = "../rovelo-core" }
+rovelo-dsl = { path = "../rovelo-dsl" }
+# window, event loop, persistence of window size and last brand
+eframe = { version = "0.37", features = ["persistence"] }
+# same egui eframe re-exports, imported directly for short paths
+egui = "0.37"
+# native open/save dialogs
+rfd = "0.17"
+# PNG export: rasterises the SVG string (re-exports usvg, fontdb and tiny-skia)
+resvg = { version = "0.49", default-features = false, features = ["text", "system-fonts", "memmap-fonts"] }
+serde.workspace = true
+serde_json.workspace = true

@@ -1,0 +1,59 @@
+# Icons
+
+Nucleo UI, duotone filled (glyph-duo), 18px. Each file uses `currentColor`; secondary shapes carry `opacity="0.4"`. File name = role in the app. `pan`, `phone` and `star` are single-tone in the source set, so the app and the exporter draw them at full ink.
+
+- `select.svg` ← cursor-rays
+- `pan.svg` ← hand
+- `add-node.svg` ← square-plus
+- `connect.svg` ← connect
+- `undo.svg` ← undo
+- `redo.svg` ← redo
+- `auto-layout.svg` ← sitemap
+- `fit.svg` ← expand-obj
+- `open.svg` ← folder-open
+- `save.svg` ← floppy-disk
+- `export.svg` ← export
+- `moon.svg` ← moon-stars
+- `sun.svg` ← sun
+- `tasks.svg` ← check-list
+- `brand.svg` ← palette
+- `code.svg` ← code
+- `zoom-in.svg` ← magnifier-plus
+- `zoom-out.svg` ← magnifier-minus
+- `plus.svg` ← plus
+- `minus.svg` ← minus
+- `calendar.svg` ← calendar
+- `trash.svg` ← trash
+- `duplicate.svg` ← duplicate
+- `sidebar.svg` ← sidebar-left-2
+- `close.svg` ← xmark
+- `check.svg` ← check
+- `link.svg` ← link
+- `tag.svg` ← tag
+- `flag.svg` ← flag
+- `chevron-down.svg` ← chevron-down
+- `chevron-right.svg` ← chevron-right
+- `sliders.svg` ← sliders
+- `shapes.svg` ← shapes
+- `user.svg` ← user
+- `lock.svg` ← lock
+- `mail.svg` ← envelope
+- `home.svg` ← house-2
+- `cart.svg` ← cart-shopping
+- `done.svg` ← circle-check
+- `star.svg` ← star
+- `gear.svg` ← gear
+- `search.svg` ← magnifier
+- `bell.svg` ← bell
+- `card.svg` ← credit-card
+- `phone.svg` ← phone
+- `align-left.svg` ← align-left
+- `align-center.svg` ← align-horizontal (centres on a vertical axis)
+- `align-right.svg` ← align-right
+- `align-top.svg` ← align-top
+- `align-middle.svg` ← align-vertical (centres on a horizontal axis)
+- `align-bottom.svg` ← align-bottom
+- `play.svg` ← circle-play
+- `branch.svg` ← code-branch
+- `window.svg` ← window-layout
+- `note.svg` ← note

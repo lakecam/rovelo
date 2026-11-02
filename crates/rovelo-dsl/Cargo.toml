@@ -1,0 +1,8 @@
+[package]
+name = "rovelo-dsl"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+rovelo-core = { path = "../rovelo-core" }

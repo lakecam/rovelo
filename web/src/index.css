@@ -1,0 +1,197 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/inter";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Rovelo chrome tokens (DESIGN.md). The user's brand kit colours only the diagram. */
+:root {
+  --rv-paper: var(--color-zinc-50);
+  --rv-surface: #ffffff;
+  --rv-sunk: var(--color-zinc-100);
+  --rv-border: var(--color-zinc-200);
+  --rv-border-strong: var(--color-zinc-300);
+  --rv-dot: var(--color-zinc-300);
+  --rv-text: var(--color-zinc-900);
+  --rv-muted: var(--color-zinc-500);
+  --rv-accent: var(--color-fuchsia-600);
+  --rv-accent-soft: var(--color-fuchsia-50);
+  --rv-accent-text: var(--color-fuchsia-700);
+  --rv-success: var(--color-green-600);
+  --rv-danger: var(--color-red-600);
+  --rv-danger-soft: var(--color-red-50);
+  --rv-warn: var(--color-amber-600);
+  --rv-warn-soft: var(--color-amber-50);
+  --rv-shadow-hair: 0 1px 2px rgba(24, 24, 27, 0.05);
+  --rv-shadow-panel: 0 8px 24px rgba(24, 24, 27, 0.08), 0 2px 6px rgba(24, 24, 27, 0.04);
+
+  --radius: 0.625rem;
+  --background: var(--rv-paper);
+  --foreground: var(--rv-text);
+  --card: var(--rv-surface);
+  --card-foreground: var(--rv-text);
+  --popover: var(--rv-surface);
+  --popover-foreground: var(--rv-text);
+  --primary: var(--rv-accent);
+  --primary-foreground: #ffffff;
+  --secondary: var(--rv-sunk);
+  --secondary-foreground: var(--rv-text);
+  --muted: var(--rv-sunk);
+  --muted-foreground: var(--rv-muted);
+  --accent: var(--rv-sunk);
+  --accent-foreground: var(--rv-text);
+  --destructive: var(--rv-danger);
+  --border: var(--rv-border);
+  --input: var(--rv-border);
+  --ring: var(--rv-accent);
+  color-scheme: light;
+  --rb-accent: var(--primary);
+  --rb-accent-fg: var(--primary-foreground);
+    --rb-radius: 10px;
+    --rb-r-xs: max(0px, calc(var(--rb-radius) - 6px));
+    --rb-r-sm: max(0px, calc(var(--rb-radius) - 4px));
+    --rb-r-md: max(0px, calc(var(--rb-radius) - 2px));
+    --rb-r-lg: var(--rb-radius);
+    --rb-r-xl: calc(var(--rb-radius) + min(2px, var(--rb-radius)));
+    --rb-r-2xl: calc(var(--rb-radius) + min(4px, var(--rb-radius)));
+    --rb-r-3xl: calc(var(--rb-radius) + min(6px, var(--rb-radius)));
+    --rb-r-4xl: calc(var(--rb-radius) + min(8px, var(--rb-radius)));
+    --rb-r-5xl: calc(var(--rb-radius) + min(12px, var(--rb-radius) * 2));
+    --rb-r-6xl: calc(var(--rb-radius) + min(16px, var(--rb-radius) * 3));
+    --rb-r-full: max(var(--rb-radius) * 1.5, (var(--rb-radius) - 8px) * 999);
+}
+
+.dark {
+  --rv-paper: var(--color-zinc-950);
+  --rv-surface: var(--color-zinc-900);
+  --rv-sunk: var(--color-zinc-800);
+  --rv-border: var(--color-zinc-800);
+  --rv-border-strong: var(--color-zinc-700);
+  --rv-dot: var(--color-zinc-800);
+  --rv-text: var(--color-zinc-50);
+  --rv-muted: var(--color-zinc-400);
+  --rv-accent: var(--color-fuchsia-600);
+  --rv-accent-soft: var(--color-fuchsia-950);
+  --rv-accent-text: var(--color-fuchsia-300);
+  --rv-success: var(--color-green-400);
+  --rv-danger: var(--color-red-400);
+  --rv-danger-soft: var(--color-red-950);
+  --rv-warn: var(--color-amber-400);
+  --rv-warn-soft: var(--color-amber-950);
+  --rv-shadow-hair: 0 0 #0000;
+  --rv-shadow-panel: 0 0 #0000;
+  color-scheme: dark;
+  --rb-accent: var(--primary);
+  --rb-accent-fg: var(--primary-foreground);
+}
+
+@theme inline {
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-heading: var(--font-sans);
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+  /* Rovelo names */
+  --color-paper: var(--rv-paper);
+  --color-surface: var(--rv-surface);
+  --color-sunk: var(--rv-sunk);
+  --color-hair: var(--rv-border);
+  --color-hair-strong: var(--rv-border-strong);
+  --color-ink: var(--rv-text);
+  --color-ink-muted: var(--rv-muted);
+  --color-brand: var(--rv-accent);
+  --color-brand-soft: var(--rv-accent-soft);
+  --color-brand-text: var(--rv-accent-text);
+  --color-ok: var(--rv-success);
+  --color-bad: var(--rv-danger);
+  --color-bad-soft: var(--rv-danger-soft);
+  --color-warn: var(--rv-warn);
+  --color-warn-soft: var(--rv-warn-soft);
+  --shadow-hair: var(--rv-shadow-hair);
+  --shadow-panel: var(--rv-shadow-panel);
+  --color-rb-accent-fg: var(--rb-accent-fg);
+  --color-rb-accent: var(--rb-accent);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+  body {
+    @apply bg-paper font-sans text-sm text-ink antialiased;
+    margin: 0;
+    overflow: hidden;
+    overscroll-behavior: none;
+    -webkit-font-smoothing: antialiased;
+  }
+  /* One ring on the one control with keyboard focus; clicks leave none. */
+  :focus-visible {
+    outline: 2px solid var(--rv-accent);
+    outline-offset: 2px;
+  }
+  ::selection {
+    background: var(--rv-accent-soft);
+  }
+  button {
+    font: inherit;
+  }
+}
+
+/* Floating chrome. */
+.rv-panel {
+  background: var(--rv-surface);
+  border: 1px solid var(--rv-border);
+  box-shadow: var(--rv-shadow-panel);
+}
+.rv-pill {
+  background: var(--rv-surface);
+  border: 1px solid var(--rv-border);
+  box-shadow: var(--rv-shadow-hair);
+}
+
+/* Node text is hidden while its inline editor is open. */
+.rv-editing text {
+  visibility: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.rv-icon > svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}

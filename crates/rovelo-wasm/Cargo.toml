@@ -1,0 +1,15 @@
+[package]
+name = "rovelo-wasm"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+rovelo-core = { path = "../rovelo-core" }
+rovelo-dsl = { path = "../rovelo-dsl" }
+serde.workspace = true
+serde_json.workspace = true
+wasm-bindgen = "0.2"
